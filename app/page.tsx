@@ -1,84 +1,24 @@
-const services = [
-  {
-    title: "Para Pessoas",
-    items: [
-      "Psicoterapia clinica",
-      "Modificacao de comportamento",
-      "Design de vida",
-    ],
-    icon: "mind",
-  },
-  {
-    title: "Para Empresas",
-    items: [
-      "Consultoria organizacional",
-      "Gestao por contingencias",
-      "Engenharia de performance",
-    ],
-    icon: "building",
-  },
-];
-
-const highlights = [
-  {
-    title: "Para Pessoas",
-    text: "Psicoterapia clinica e modificacao comportamental.",
-    icon: "leaf",
-  },
-  {
-    title: "Para Empresas",
-    text: "Estrategias aplicadas para contextos organizacionais.",
-    icon: "branch",
-  },
-  {
-    title: "Colaboracoes",
-    text: "Projetos integrados para equipes, liderancas e parceiros.",
-    icon: "network",
-  },
-];
-
-const values = [
-  "Ciencia e empatia",
-  "Evolucao constante",
-  "Resultados aplicados",
-  "Parcerias",
-];
-
-function BrandMark() {
-  return (
-    <div className="brand-mark" aria-hidden="true">
-      <span />
-      <span />
-      <span />
-    </div>
-  );
-}
-
-function SymbolIcon({ type }: { type: string }) {
-  return (
-    <span className={`symbol symbol-${type}`} aria-hidden="true">
-      <span />
-    </span>
-  );
-}
+import { BrandMark } from "@/src/components/ui/BrandMark";
+import { SymbolIcon } from "@/src/components/ui/SymbolIcon";
+import { highlights, services, values } from "@/src/content/home-content";
 
 export default function Home() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Self em Acao - Inicio">
+        <a className="brand" href="#top" aria-label="Self em Ação - Início">
           <BrandMark />
           <span>
             <strong>Self</strong>
-            <small>em Acao</small>
+            <small>em Ação</small>
           </span>
         </a>
 
         <nav className="desktop-nav" aria-label="Navegacao principal">
           <a href="#sobre">Sobre</a>
-          <a href="#pessoas">Para Voce</a>
+          <a href="#pessoas">Para Você</a>
           <a href="#empresas">Para Empresas</a>
-          <a href="#colaboracoes">Colaboracoes</a>
+          <a href="#colaboracoes">Colaborações</a>
         </nav>
 
         <a className="header-action" href="#contato">
@@ -89,17 +29,17 @@ export default function Home() {
       <section className="hero-section" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Gabriel Batista Neuropsicologia</p>
-          <h1>Uma abordagem clara e empatica para o bem-estar mental.</h1>
+          <h1>Uma abordagem clara e empática para o bem-estar mental.</h1>
           <p className="hero-subtitle">
-            Atendimento clinico e consultoria organizacional com ciencia,
-            humanizacao e resultados aplicados a diferentes contextos.
+            Atendimento clínico e consultoria organizacional com ciência,
+            humanização e resultados aplicados a diferentes contextos.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#contato">
               Agendar consulta
             </a>
             <a className="secondary-button" href="#servicos">
-              Ver servicos
+              Ver serviços
             </a>
           </div>
         </div>
@@ -122,7 +62,7 @@ export default function Home() {
         </span>
       </div>
 
-      <section className="audience-grid" id="servicos" aria-label="Servicos">
+      <section className="audience-grid" id="servicos" aria-label="Serviços">
         {services.map((service) => (
           <article
             className="audience-card"
@@ -147,7 +87,7 @@ export default function Home() {
           <article
             className="highlight-card"
             id={
-              highlight.title === "Colaboracoes" ? "colaboracoes" : undefined
+              highlight.title === "Colaborações" ? "colaboracoes" : undefined
             }
             key={highlight.title}
           >
@@ -169,16 +109,16 @@ export default function Home() {
         <div className="about-copy">
           <p className="eyebrow">Sobre mim</p>
           <h2>
-            Atuacao clinica e organizacional com escuta, metodo e clareza.
+            Atuação clínica e organizacional com escuta, método e clareza.
           </h2>
           <p>
-            Gabriel Batista une neuropsicologia, analise do comportamento e
-            experiencia em contextos humanos complexos para apoiar pessoas,
-            empresas e colaboracoes estrategicas.
+            Gabriel Batista une neuropsicologia, análise do comportamento e
+            experiência em contextos humanos complexos para apoiar pessoas,
+            empresas e colaborações estratégicas.
           </p>
           <p>
-            A proposta da Self em Acao e traduzir conhecimento cientifico em
-            caminhos praticos, acolhedores e mensuraveis para cada realidade.
+            A proposta da Self em Ação é traduzir conhecimento científico em
+            caminhos práticos, acolhedores e mensuráveis para cada realidade.
           </p>
         </div>
       </section>
@@ -186,7 +126,7 @@ export default function Home() {
       <section className="values-section" aria-label="Valores">
         <div>
           <p className="eyebrow">Valores</p>
-          <h2>Principios que orientam cada encontro.</h2>
+          <h2>Princípios que orientam cada encontro.</h2>
         </div>
         <div className="values-grid">
           {values.map((value, index) => (
@@ -201,7 +141,7 @@ export default function Home() {
       <footer className="site-footer" id="contato">
         <div className="footer-brand">
           <BrandMark />
-          <span>Self em Acao</span>
+          <span>Self em Ação</span>
         </div>
         <p>
           2026 Gabriel Batista Neuropsicologia | Sao Paulo, SP

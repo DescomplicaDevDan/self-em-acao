@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Self em Acao | Gabriel Batista Neuropsicologia",
+  title: "Self em Ação | Gabriel Batista Neuropsicologia",
   description:
-    "Atendimento clinico e consultoria organizacional com ciencia, empatia e resultados aplicados.",
+    "Atendimento clínico e consultoria organizacional com ciência, empatia e resultados aplicados.",
 };
 
 export default function RootLayout({

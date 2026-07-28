@@ -1,19 +1,19 @@
-# Self em Acao
+# Self em Ação
 
-Landing page institucional para a marca **Self em Acao**, projeto ligado a
-atendimento clinico, neuropsicologia e consultoria organizacional.
+Landing page institucional para a marca **Self em Ação**, projeto ligado a
+atendimento clínico, neuropsicologia e consultoria organizacional.
 
-Este projeto tambem funciona como registro de desenvolvimento para portfolio,
-recrutamento e selecao. A ideia e documentar nao apenas o resultado final, mas
-tambem as decisoes tomadas durante a construcao.
+Este projeto também funciona como registro de desenvolvimento para portfólio,
+recrutamento e seleção. A ideia é documentar não apenas o resultado final, mas
+também as decisões tomadas durante a construção.
 
 ## Objetivo
 
-Criar uma pagina inicial responsiva, clara e profissional para apresentar:
+Criar uma página inicial responsiva, clara e profissional para apresentar:
 
-- a identidade da Self em Acao;
-- a atuacao de Gabriel Batista em neuropsicologia;
-- os servicos para pessoas e empresas;
+- a identidade da Self em Ação;
+- a atuação de Gabriel Batista em neuropsicologia;
+- os serviços para pessoas e empresas;
 - valores da marca;
 - caminhos de contato e agendamento.
 
@@ -33,15 +33,16 @@ visuais enviadas pelo cliente.
 Foram implementados:
 
 - estrutura inicial da homepage em `app/page.tsx`;
+- conteúdo principal centralizado em `src/content/home-content.ts`;
 - identidade visual em `app/globals.css`;
 - metadados e idioma em `app/layout.tsx`;
 - layout responsivo para desktop e mobile;
-- secoes de hero, servicos, sobre, valores e rodape;
-- componentes visuais temporarios para marca, icones e area da foto.
+- seções de hero, serviços, sobre, valores e rodapé;
+- componentes visuais temporários para marca, ícones e área da foto.
 
 ## Decisoes de desenvolvimento
 
-### 1. Nao usar prints como assets finais
+### 1. Não usar prints como assets finais
 
 As imagens enviadas pelo cliente foram usadas como referencia visual, mas nao
 foram recortadas para virar logo ou foto final.
@@ -66,9 +67,9 @@ Ainda nao foram implementados:
 
 ### 3. Organizar conteudo em listas reutilizaveis
 
-Alguns conteudos foram definidos como arrays em `app/page.tsx`, como servicos,
-destaques e valores. Isso facilita ajustes futuros sem mexer em toda a estrutura
-do JSX.
+Os conteúdos de serviços, destaques e valores foram movidos para
+`src/content/home-content.ts`. Isso facilita ajustes futuros sem mexer em toda a
+estrutura do JSX.
 
 ## Como rodar o projeto
 
@@ -78,7 +79,7 @@ No PowerShell do Windows, entre na pasta correta:
 cd "C:\Users\Dev\OneDrive\Desktop\Projeto\Self em Ação-Psi\self-em-acao"
 ```
 
-Instale as dependencias, se necessario:
+Instale as dependências, se necessário:
 
 ```powershell
 npm install
@@ -105,7 +106,7 @@ npm run lint
 npm run build
 ```
 
-Observacao: este projeto deve ser executado pelo ambiente Windows/PowerShell.
+Observação: este projeto deve ser executado pelo ambiente Windows/PowerShell.
 Rodar pelo WSL pode causar erro se o terminal Linux tentar usar o Node/NPM do
 Windows.
 
@@ -134,18 +135,32 @@ Arquivos alterados:
 - `app/page.tsx`
 - `app/globals.css`
 - `app/layout.tsx`
+- `src/content/home-content.ts`
 
 Principais entregas:
 
 - estrutura da homepage;
 - paleta visual baseada na marca;
 - layout responsivo;
-- secoes principais;
+- seções principais;
 - placeholders para assets finais;
 - metadados iniciais do site.
+
+### Etapa 2 - Organização inicial de conteúdo
+
+Foi iniciado o processo de organização de diretórios para separar conteúdo,
+componentes e responsabilidades da página.
+
+Principais entregas:
+
+- criação de `src/content/home-content.ts`;
+- centralização dos serviços, destaques e valores da home;
+- atualização dos textos de serviços para refletir melhor a proposta atual:
+  psicoterapia clínica, reabilitação cognitiva, avaliação neuropsicológica,
+  treinamento e desenvolvimento de pessoas, recrutamento e seleção, e NR1.
 
 Mensagem de commit sugerida:
 
 ```text
-feat(home): cria landing page inicial da Self em Acao
+refactor(home): centraliza conteúdo da página inicial
 ```

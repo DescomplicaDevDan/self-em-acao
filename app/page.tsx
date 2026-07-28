@@ -1,9 +1,12 @@
 import { BrandMark } from "@/src/components/ui/BrandMark";
 import { SymbolIcon } from "@/src/components/ui/SymbolIcon";
-import { highlights, services, values } from "@/src/content/home-content";
+import { values } from "@/src/content/home-content";
 import { Header } from "@/src/components/layout/Header";
 import { Footer } from "@/src/components/layout/Footer";
 import { HeroSection } from "@/src/components/sections/HeroSection";
+import { MissionStrip } from "@/src/components/sections/MissionStrip";
+import { ServicesSection } from "@/src/components/sections/ServicesSection";
+import { HighlightsSection } from "@/src/components/sections/HighlightsSection";
 
 export default function Home() {
   return (
@@ -12,49 +15,11 @@ export default function Home() {
 
       <HeroSection />
 
-      <div className="mission-strip">
-        <SymbolIcon type="leaf" />
-        <span>
-          Desenvolvendo pessoas. Transformando contextos. Potencializando
-          resultados.
-        </span>
-      </div>
+      <MissionStrip />
 
-      <section className="audience-grid" id="servicos" aria-label="Serviços">
-        {services.map((service) => (
-          <article
-            className="audience-card"
-            id={service.title === "Para Pessoas" ? "pessoas" : "empresas"}
-            key={service.title}
-          >
-            <SymbolIcon type={service.icon} />
-            <div>
-              <h2>{service.title}</h2>
-              <ul>
-                {service.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))}
-      </section>
+      <ServicesSection />
 
-      <section className="highlight-grid" aria-label="Áreas de atuação">
-        {highlights.map((highlight) => (
-          <article
-            className="highlight-card"
-            id={
-              highlight.title === "Colaborações" ? "colaboracoes" : undefined
-            }
-            key={highlight.title}
-          >
-            <SymbolIcon type={highlight.icon} />
-            <h3>{highlight.title}</h3>
-            <p>{highlight.text}</p>
-          </article>
-        ))}
-      </section>
+      <HighlightsSection />
 
       <section className="about-section" id="sobre">
         <div className="about-visual">

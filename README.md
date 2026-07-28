@@ -185,6 +185,7 @@ Arquivos envolvidos:
 
 - `src/components/layout/Header.tsx`
 - `src/components/layout/Footer.tsx`
+- `src/components/sections/HeroSection.tsx`
 - `src/components/ui/BrandMark.tsx`
 - `src/components/ui/SymbolIcon.tsx`
 - `app/page.tsx`
@@ -209,4 +210,35 @@ Mensagem de commit sugerida:
 
 ```text
 refactor(home): organiza componentes e conteúdo da página inicial
+```
+
+### Etapa 4 - Extração da seção hero
+
+Foi iniciada a separação das grandes seções da homepage. A primeira seção movida
+foi o hero, por ser o bloco principal da página e concentrar título, subtítulo,
+chamadas para ação e área visual da foto profissional.
+
+Arquivos envolvidos:
+
+- `src/components/sections/HeroSection.tsx`
+- `app/page.tsx`
+
+Principais entregas:
+
+- criação do componente `HeroSection`;
+- remoção do bloco hero diretamente de `app/page.tsx`;
+- uso de `<HeroSection />` na montagem da página;
+- correção de textos antigos sem acentuação em seções que ainda permanecem em
+  `app/page.tsx`.
+
+Justificativa para commit:
+
+Esta etapa deve ser commitada como refatoração porque melhora a separação de
+responsabilidades e deixa `app/page.tsx` mais próximo de um arquivo de montagem
+da página.
+
+Mensagem de commit sugerida:
+
+```text
+refactor(home): extrai seção hero da página inicial
 ```

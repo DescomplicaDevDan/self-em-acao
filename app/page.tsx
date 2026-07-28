@@ -1,45 +1,28 @@
 import { BrandMark } from "@/src/components/ui/BrandMark";
 import { SymbolIcon } from "@/src/components/ui/SymbolIcon";
 import { highlights, services, values } from "@/src/content/home-content";
+import { Header } from "@/src/components/layout/Header";
+import { Footer } from "@/src/components/layout/Footer";
 
 export default function Home() {
   return (
     <main className="site-shell">
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Self em Ação - Início">
-          <BrandMark />
-          <span>
-            <strong>Self</strong>
-            <small>em Ação</small>
-          </span>
-        </a>
-
-        <nav className="desktop-nav" aria-label="Navegacao principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#pessoas">Para Você</a>
-          <a href="#empresas">Para Empresas</a>
-          <a href="#colaboracoes">Colaborações</a>
-        </nav>
-
-        <a className="header-action" href="#contato">
-          Agendar consulta
-        </a>
-      </header>
+      <Header />
 
       <section className="hero-section" id="top">
         <div className="hero-copy">
           <p className="eyebrow">Gabriel Batista Neuropsicologia</p>
-          <h1>Uma abordagem clara e empática para o bem-estar mental.</h1>
+          <h1>Uma abordagem clara e empatica para o bem-estar mental.</h1>
           <p className="hero-subtitle">
-            Atendimento clínico e consultoria organizacional com ciência,
-            humanização e resultados aplicados a diferentes contextos.
+            Atendimento clinico e consultoria organizacional com ciencia,
+            humanizacao e resultados aplicados a diferentes contextos.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#contato">
               Agendar consulta
             </a>
             <a className="secondary-button" href="#servicos">
-              Ver serviços
+              Ver servicos
             </a>
           </div>
         </div>
@@ -57,12 +40,12 @@ export default function Home() {
       <div className="mission-strip">
         <SymbolIcon type="leaf" />
         <span>
-          Desenvolvendo pessoas. Transformando contextos. Potencializando
+          Desenvolvendo pessoas, Transformando contextos e Potencializando
           resultados.
         </span>
       </div>
 
-      <section className="audience-grid" id="servicos" aria-label="Serviços">
+      <section className="audience-grid" id="servicos" aria-label="Servicos">
         {services.map((service) => (
           <article
             className="audience-card"
@@ -87,7 +70,7 @@ export default function Home() {
           <article
             className="highlight-card"
             id={
-              highlight.title === "Colaborações" ? "colaboracoes" : undefined
+              highlight.title === "Colaboracoes" ? "colaboracoes" : undefined
             }
             key={highlight.title}
           >
@@ -109,16 +92,16 @@ export default function Home() {
         <div className="about-copy">
           <p className="eyebrow">Sobre mim</p>
           <h2>
-            Atuação clínica e organizacional com escuta, método e clareza.
+            Atuacao clinica e organizacional com escuta, metodo e clareza.
           </h2>
           <p>
-            Gabriel Batista une neuropsicologia, análise do comportamento e
-            experiência em contextos humanos complexos para apoiar pessoas,
-            empresas e colaborações estratégicas.
+            Gabriel Batista une neuropsicologia, analise do comportamento e
+            experiencia em contextos humanos complexos para apoiar pessoas,
+            empresas e colaboracoes estrategicas.
           </p>
           <p>
-            A proposta da Self em Ação é traduzir conhecimento científico em
-            caminhos práticos, acolhedores e mensuráveis para cada realidade.
+            A proposta da Self em Acao e traduzir conhecimento cientifico em
+            caminhos praticos, acolhedores e mensuraveis para cada realidade.
           </p>
         </div>
       </section>
@@ -126,7 +109,7 @@ export default function Home() {
       <section className="values-section" aria-label="Valores">
         <div>
           <p className="eyebrow">Valores</p>
-          <h2>Princípios que orientam cada encontro.</h2>
+          <h2>Principios que orientam cada encontro.</h2>
         </div>
         <div className="values-grid">
           {values.map((value, index) => (
@@ -138,18 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer" id="contato">
-        <div className="footer-brand">
-          <BrandMark />
-          <span>Self em Ação</span>
-        </div>
-        <p>
-          2026 Gabriel Batista Neuropsicologia | Sao Paulo, SP
-        </p>
-        <a href="mailto:contato@selfemacao.com.br">
-          contato@selfemacao.com.br
-        </a>
-      </footer>
+      <Footer />
     </main>
   );
 }

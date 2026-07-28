@@ -27,12 +27,14 @@ Criar uma página inicial responsiva, clara e profissional para apresentar:
 
 ## Estado atual
 
-O projeto ja possui uma primeira versao da landing page, baseada nas referencias
+O projeto já possui uma primeira versão da landing page, baseada nas referências
 visuais enviadas pelo cliente.
 
 Foram implementados:
 
 - estrutura inicial da homepage em `app/page.tsx`;
+- componentes de layout em `src/components/layout`;
+- componentes reutilizáveis de interface em `src/components/ui`;
 - conteúdo principal centralizado em `src/content/home-content.ts`;
 - identidade visual em `app/globals.css`;
 - metadados e idioma em `app/layout.tsx`;
@@ -40,36 +42,51 @@ Foram implementados:
 - seções de hero, serviços, sobre, valores e rodapé;
 - componentes visuais temporários para marca, ícones e área da foto.
 
-## Decisoes de desenvolvimento
+## Decisões de desenvolvimento
 
 ### 1. Não usar prints como assets finais
 
-As imagens enviadas pelo cliente foram usadas como referencia visual, mas nao
+As imagens enviadas pelo cliente foram usadas como referência visual, mas não
 foram recortadas para virar logo ou foto final.
 
 Motivo: prints de WhatsApp perdem qualidade e poderiam deixar o site com aspecto
-amador. A decisao foi criar placeholders profissionais e preparar a interface
+amador. A decisão foi criar placeholders profissionais e preparar a interface
 para receber arquivos reais depois.
 
 ### 2. Criar uma base visual antes das funcionalidades
 
-A primeira etapa focou em tirar o projeto do template padrao do Next.js e criar
-uma experiencia visual alinhada a marca.
+A primeira etapa focou em tirar o projeto do template padrão do Next.js e criar
+uma experiência visual alinhada à marca.
 
-Ainda nao foram implementados:
+Ainda não foram implementados:
 
-- formulario funcional;
-- integracao com WhatsApp;
+- formulário funcional;
+- integração com WhatsApp;
 - envio de email;
 - CMS ou painel administrativo;
 - analytics;
 - deploy.
 
-### 3. Organizar conteudo em listas reutilizaveis
+### 3. Organizar conteúdo em listas reutilizáveis
 
 Os conteúdos de serviços, destaques e valores foram movidos para
 `src/content/home-content.ts`. Isso facilita ajustes futuros sem mexer em toda a
 estrutura do JSX.
+
+### 4. Separar componentes antes de crescer a página
+
+A homepage começou dentro de `app/page.tsx`, o que é aceitável no início, mas
+fica difícil de manter conforme a tela cresce.
+
+A decisão foi separar primeiro componentes pequenos e claros, sem criar uma
+arquitetura exagerada:
+
+- `Header` e `Footer` em `src/components/layout`;
+- `BrandMark` e `SymbolIcon` em `src/components/ui`;
+- conteúdo da página em `src/content/home-content.ts`.
+
+Motivo: deixar `app/page.tsx` responsável por montar a página, enquanto os
+detalhes visuais e textos ficam em arquivos próprios.
 
 ## Como rodar o projeto
 
@@ -97,7 +114,7 @@ Depois acesse:
 http://localhost:3000
 ```
 
-## Validacao
+## Validação
 
 Antes de considerar uma etapa pronta, rode:
 
@@ -110,23 +127,23 @@ Observação: este projeto deve ser executado pelo ambiente Windows/PowerShell.
 Rodar pelo WSL pode causar erro se o terminal Linux tentar usar o Node/NPM do
 Windows.
 
-## Proximas etapas
+## Próximas etapas
 
 - Substituir placeholders pela logo real.
 - Adicionar foto profissional real.
 - Revisar textos com o cliente.
 - Definir contato oficial, WhatsApp e redes sociais.
 - Melhorar CTA de agendamento.
-- Criar secao de depoimentos ou autoridade profissional, se fizer sentido.
+- Criar seção de depoimentos ou autoridade profissional, se fizer sentido.
 - Implementar formulario ou link direto de contato.
 - Validar responsividade em diferentes tamanhos de tela.
 - Preparar deploy.
 
-## Historico de etapas
+## Histórico de etapas
 
 ### Etapa 1 - Base visual da landing page
 
-Foi criada a primeira versao da pagina inicial, substituindo o template padrao
+Foi criada a primeira versão da pagina inicial, substituindo o template padrão
 do Next.js por uma landing page institucional inspirada na proposta visual do
 cliente.
 
@@ -159,8 +176,37 @@ Principais entregas:
   psicoterapia clínica, reabilitação cognitiva, avaliação neuropsicológica,
   treinamento e desenvolvimento de pessoas, recrutamento e seleção, e NR1.
 
+### Etapa 3 - Separação de componentes de layout e UI
+
+Foi feita uma refatoração inicial para reduzir responsabilidades dentro de
+`app/page.tsx` e melhorar a organização do projeto.
+
+Arquivos envolvidos:
+
+- `src/components/layout/Header.tsx`
+- `src/components/layout/Footer.tsx`
+- `src/components/ui/BrandMark.tsx`
+- `src/components/ui/SymbolIcon.tsx`
+- `app/page.tsx`
+
+Principais entregas:
+
+- extração do cabeçalho para `Header`;
+- extração do rodapé para `Footer`;
+- isolamento da marca visual provisória em `BrandMark`;
+- isolamento dos ícones CSS em `SymbolIcon`;
+- correção de duplicidade de `services`, `highlights` e `values` em
+  `app/page.tsx`;
+- troca de `<header />` vazio por `<Header />`;
+- troca de rodapé vazio por `<Footer />`.
+
+Justificativa para commit:
+
+Esta etapa deve ser commitada como refatoração porque melhora a estrutura interna
+do código sem mudar a proposta funcional principal da página.
+
 Mensagem de commit sugerida:
 
 ```text
-refactor(home): centraliza conteúdo da página inicial
+refactor(home): organiza componentes e conteúdo da página inicial
 ```

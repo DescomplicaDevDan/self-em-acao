@@ -83,6 +83,7 @@ arquitetura exagerada:
 
 - `Header` e `Footer` em `src/components/layout`;
 - `BrandMark` e `SymbolIcon` em `src/components/ui`;
+- seções principais em `src/components/sections`;
 - conteúdo da página em `src/content/home-content.ts`.
 
 Motivo: deixar `app/page.tsx` responsável por montar a página, enquanto os
@@ -241,4 +242,42 @@ Mensagem de commit sugerida:
 
 ```text
 refactor(home): extrai seção hero da página inicial
+```
+
+### Etapa 5 - Conclusão da separação das seções da home
+
+Foram extraídas as seções restantes da página inicial para componentes próprios.
+Com isso, `app/page.tsx` passou a funcionar principalmente como arquivo de
+composição da página.
+
+Arquivos envolvidos:
+
+- `src/components/sections/MissionStrip.tsx`
+- `src/components/sections/ServicesSection.tsx`
+- `src/components/sections/HighlightsSection.tsx`
+- `src/components/sections/AboutSection.tsx`
+- `src/components/sections/ValuesSection.tsx`
+- `app/page.tsx`
+
+Principais entregas:
+
+- extração da faixa de missão para `MissionStrip`;
+- extração dos serviços para `ServicesSection`;
+- extração dos destaques para `HighlightsSection`;
+- extração da seção sobre para `AboutSection`;
+- extração dos valores para `ValuesSection`;
+- limpeza dos imports de `app/page.tsx`;
+- centralização do uso de `services`, `highlights` e `values` nos componentes
+  que realmente renderizam esses dados.
+
+Justificativa para commit:
+
+Esta etapa deve ser commitada como refatoração porque melhora a organização,
+reduz o tamanho de `app/page.tsx` e facilita manutenção sem alterar a proposta
+visual principal da página.
+
+Mensagem de commit sugerida:
+
+```text
+refactor(home): extrai seções restantes da página inicial
 ```

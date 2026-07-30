@@ -1,9 +1,10 @@
 export function BrandMark() {
   return (
-    <div className="brand-mark" aria-hidden="true">
-      <span />
-      <span />
-      <span />
-    </div>
+    <img
+      className="brand-mark"
+      src="/brand/logo-simbolo.svg"
+      alt=""
+      aria-hidden="true"
+    />
   );
 }

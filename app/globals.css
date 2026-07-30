@@ -90,46 +90,11 @@ a {
 }
 
 .brand-mark {
-  position: relative;
   width: 48px;
   height: 48px;
   flex: 0 0 48px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-}
-
-.brand-mark::before {
-  position: absolute;
-  inset: 8px 21px 10px;
-  content: "";
-  border-radius: 999px 999px 0 0;
-  background: var(--blue);
-}
-
-.brand-mark span {
-  position: absolute;
-  bottom: 8px;
-  width: 16px;
-  height: 22px;
-  border-radius: 999px 999px 4px 999px;
-  background: var(--green);
-  transform-origin: bottom center;
-}
-
-.brand-mark span:first-child {
-  left: 8px;
-  transform: rotate(-38deg);
-}
-
-.brand-mark span:nth-child(2) {
-  left: 16px;
-  height: 28px;
-  background: var(--blue);
-}
-
-.brand-mark span:nth-child(3) {
-  right: 8px;
-  transform: rotate(38deg);
+  display: block;
+  object-fit: contain;
 }
 
 .desktop-nav {
@@ -464,6 +429,17 @@ h1 {
   color: var(--blue);
 }
 
+.symbol img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  opacity: 0.92;
+}
+
+.highlight-card:first-child .symbol img {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(8%) saturate(721%) hue-rotate(324deg) brightness(101%) contrast(98%);
+}
+
 .symbol span {
   display: block;
   width: 26px;
@@ -525,7 +501,6 @@ h1 {
   width: 40px;
   height: 40px;
   flex-basis: 40px;
-  border-color: rgba(201, 166, 89, 0.8);
 }
 
 .footer-brand {

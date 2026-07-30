@@ -23,12 +23,12 @@ export const highlights = [
   {
     title: "Para Pessoas",
     text: "Psicoterapia clínica, Reabilitação Cognitiva e Avaliação Neuropsicológica.",
-    icon: "leaf",
+    icon: "mind",
   },
   {
     title: "Para Empresas",
     text: "Treinamento e desenvolvimento de Pessoas, Recrutamento e seleção e NR1 - Gestão de Segurança e Saúde no Trabalho.",
-    icon: "branch",
+    icon: "building",
   },
   {
     title: "Colaborações",

@@ -3,17 +3,17 @@ export const services = [
     title: "Para Pessoas",
     items: [
       "Psicoterapia clínica",
-      "Reabilitação Cognitiva",
-      "Avaliação Neuropsicológica",
+      "Reabilitação cognitiva",
+      "Avaliação neuropsicológica",
     ],
     icon: "mind",
   },
   {
     title: "Para Empresas",
     items: [
-      "Treinamento e desenvolvimento de Pessoas",
+      "Treinamento e desenvolvimento de pessoas",
       "Recrutamento e seleção",
-      "NR1 - Gestão de Segurança e Saúde no Trabalho",
+      "NR-1 - Gestão de segurança e saúde no trabalho",
     ],
     icon: "building",
   },
@@ -22,12 +22,12 @@ export const services = [
 export const highlights = [
   {
     title: "Para Pessoas",
-    text: "Psicoterapia clínica, Reabilitação Cognitiva e Avaliação Neuropsicológica.",
+    text: "Psicoterapia clínica, reabilitação cognitiva e avaliação neuropsicológica.",
     icon: "mind",
   },
   {
     title: "Para Empresas",
-    text: "Treinamento e desenvolvimento de Pessoas, Recrutamento e seleção e NR1 - Gestão de Segurança e Saúde no Trabalho.",
+    text: "Treinamento e desenvolvimento de pessoas, recrutamento e seleção e NR-1 - Gestão de segurança e saúde no trabalho.",
     icon: "building",
   },
   {

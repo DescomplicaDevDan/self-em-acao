@@ -8,16 +8,16 @@ describe("ServicesSection", () => {
 
     expect(screen.getByText("Para Pessoas")).toBeInTheDocument();
     expect(screen.getByText("Psicoterapia clínica")).toBeInTheDocument();
-    expect(screen.getByText("Reabilitação Cognitiva")).toBeInTheDocument();
-    expect(screen.getByText("Avaliação Neuropsicológica")).toBeInTheDocument();
+    expect(screen.getByText("Reabilitação cognitiva")).toBeInTheDocument();
+    expect(screen.getByText("Avaliação neuropsicológica")).toBeInTheDocument();
 
     expect(screen.getByText("Para Empresas")).toBeInTheDocument();
     expect(
-      screen.getByText("Treinamento e desenvolvimento de Pessoas"),
+      screen.getByText("Treinamento e desenvolvimento de pessoas"),
     ).toBeInTheDocument();
     expect(screen.getByText("Recrutamento e seleção")).toBeInTheDocument();
     expect(
-      screen.getByText("NR1 - Gestão de Segurança e Saúde no Trabalho"),
+      screen.getByText("NR-1 - Gestão de segurança e saúde no trabalho"),
     ).toBeInTheDocument();
   });
 });

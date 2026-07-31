@@ -5,9 +5,11 @@ export function Header() {
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Self em Ação - Início">
         <BrandMark />
-        <span>
+        <span className="brand-name">
           <strong>Self</strong>
-          <small>em Ação</small>
+          <small>
+            <span>em</span> Ação
+          </small>
         </span>
       </a>
 

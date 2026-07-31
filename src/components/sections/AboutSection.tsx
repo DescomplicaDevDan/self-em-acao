@@ -6,13 +6,21 @@ export function AboutSection() {
       <div className="about-visual">
         <div className="office-frame">
           <BrandMark />
-          <span>Imagem institucional</span>
+          <div className="office-copy">
+            <span className="brand-name office-brand-name">
+              <strong>Self</strong>
+              <small>
+                <span>em</span> Ação
+              </small>
+            </span>
+            <span>Imagem institucional em breve</span>
+          </div>
         </div>
       </div>
 
       <div className="about-copy">
         <p className="eyebrow">Sobre mim</p>
-        <h2>Atuação clínica e organizacional com escuta, método e clareza.</h2>
+        <h2>Atuação clínica e organizacional com escuta, método e clareza</h2>
         <p>
           Gabriel Batista une neuropsicologia, análise do comportamento e
           experiência em contextos humanos complexos para apoiar pessoas,
